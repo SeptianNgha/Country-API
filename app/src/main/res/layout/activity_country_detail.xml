@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".activity.CountryDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28sp"
+            android:background="@drawable/button_back"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:text="Indonesia"
+            android:textColor="@color/biru"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_back" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_name2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="4dp"
+            android:text="Repuclic of Indonesia"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name1" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_bendera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:text="Bendera"
+            android:textColor="@color/biru"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name2" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_bendera"
+            android:layout_width="290dp"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            app:cardElevation="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_bendera">
+
+            <ImageView
+                android:id="@+id/iv_bendera"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:layout_margin="10dp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_lambang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="42dp"
+            android:text="Lambang Negara"
+            android:textColor="@color/biru"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_bendera" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_lambang"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lambang">
+
+            <ImageView
+                android:id="@+id/iv_lambang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:layout_margin="14dp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_capital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ibu Kota :"
+            android:textColor="@color/biru"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="32dp"
+            app:drawableStartCompat="@drawable/detail_city"
+            android:drawablePadding="6dp"
+            android:layout_marginTop="42dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_lambang" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_capital_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jakarta"
+            android:textColor="@color/biru"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_capital"
+            app:layout_constraintTop_toTopOf="@id/tv_capital"
+            app:layout_constraintBottom_toBottomOf="@id/tv_capital"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_region"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Benua :"
+            android:textColor="@color/biru"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="32dp"
+            app:drawableStartCompat="@drawable/detail_map"
+            android:drawablePadding="6dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_capital_value" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_region_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asia"
+            android:textColor="@color/biru"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_region"
+            app:layout_constraintTop_toTopOf="@id/tv_region"
+            app:layout_constraintBottom_toBottomOf="@id/tv_region"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_subregion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wilayah :"
+            android:textColor="@color/biru"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="32dp"
+            app:drawableStartCompat="@drawable/detail_map"
+            android:drawablePadding="6dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_region_value" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_subregion_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asia Tenggara"
+            android:textColor="@color/biru"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_subregion"
+            app:layout_constraintTop_toTopOf="@id/tv_subregion"
+            app:layout_constraintBottom_toBottomOf="@id/tv_subregion"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_luas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luas Wilayah :"
+            android:textColor="@color/biru"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="32dp"
+            app:drawableStartCompat="@drawable/detail_luas"
+            android:drawablePadding="6dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subregion_value" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_luas_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1200500"
+            android:textColor="@color/biru"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_luas"
+            app:layout_constraintTop_toTopOf="@id/tv_luas"
+            app:layout_constraintBottom_toBottomOf="@id/tv_luas"/>
+
+        <TextView
+            android:id="@+id/tv_luas_km"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/biru"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/tv_luas_value"
+            app:layout_constraintTop_toTopOf="@id/tv_luas_value"
+            app:layout_constraintBottom_toBottomOf="@id/tv_luas_value"
+            android:text="km²" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_populasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Populasi :"
+            android:textColor="@color/biru"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="32dp"
+            app:drawableStartCompat="@drawable/detail_populasi"
+            android:drawablePadding="6dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_luas_value" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_populasi_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1200500"
+            android:textColor="@color/biru"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_populasi"
+            app:layout_constraintTop_toTopOf="@id/tv_populasi"
+            app:layout_constraintBottom_toBottomOf="@id/tv_populasi"/>
+
+        <TextView
+            android:id="@+id/tv_populasi_jiwa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/biru"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/tv_populasi_value"
+            app:layout_constraintTop_toTopOf="@id/tv_populasi_value"
+            app:layout_constraintBottom_toBottomOf="@id/tv_populasi_value"
+            android:text="Jiwa" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_domain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kode Domain :"
+            android:textColor="@color/biru"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="32dp"
+            app:drawableStartCompat="@drawable/detail_domain"
+            android:drawablePadding="6dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_populasi_value" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_domain_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=".id"
+            android:textColor="@color/biru"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_domain"
+            app:layout_constraintTop_toTopOf="@id/tv_domain"
+            app:layout_constraintBottom_toBottomOf="@id/tv_domain"/>
+
+        <View
+            android:id="@+id/view_bawah"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/detail_wave_bawah"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_domain_value" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
